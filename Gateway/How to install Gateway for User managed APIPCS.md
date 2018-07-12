@@ -1,4 +1,4 @@
-# Single Tenant Gateway (User Managed) Install Procedure
+# Gateway installation procedure for User managed APIPCS
 
 ## 注意事項
 
@@ -120,7 +120,4 @@
 
 ## 論理Gatewayの作成、Nodeの追加時のユーザー、パスワードなど
 
-認証方式はBasic認証です。論理Gatewayの追加、Gateway Nodeの追加時には、以下のユーザー、パスワードが必要です。
-
-- Gateway Manager (Gateway Nodeを管理するユーザー)
-- Gateway Runtime User (GatewayとManagement Service間の通信時に使うユーザー)
+認証方式はBasic認証です。

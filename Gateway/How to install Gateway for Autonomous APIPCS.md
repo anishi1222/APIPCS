@@ -8,7 +8,7 @@
 
 | 項目 | 条件 |
 |:--|:--|
-| インストール、実行User | oracle |
+| インストール、実行ユーザー | oracle |
 | JDK (JAVA_HOME)の展開先 | /u01/java |
 | Gateway Installerの展開先 | /u01/gwinst |
 | GatewayのInstall先 | /u01/apipcs/gw/install |
@@ -119,7 +119,9 @@
     - Client ID、Client Secretは、接続したいAPIPCSのインスタンスのものを使います。
     - 通常、IDCSのコンソール＞APICSAUTO_(インスタンス名)＞Configuration＞General Informationにあります。
 
-![エビフライトライアングル](https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image01.png)
+![IDCS01](https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image01.png)
+
+![IDCS02](https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image02.png)
 
 ## 論理GatewayへのGateway Nodeの追加
 
@@ -134,5 +136,6 @@
     - Gateway Runtime Userのユーザー、パスワード
     - Gateway Manager RuntimeのClient Id、Client Secret
 
-> Client ID、Client Secretは、接続したいAPIPCSのインスタンスのものを使います。
-> 通常、IDCSのコンソール＞APICSAUTO_(インスタンス名)＞Configuration＞General Informationにあります。
+    Gateway ManagerのClient Id、Client Secretは、IDCSで確認する必要があります。
+    - Client ID、Client Secretは、接続したいAPIPCSのインスタンスのものを使います。
+    - 通常、IDCSのコンソール＞APICSAUTO_(インスタンス名)＞Configuration＞General Informationにあります。

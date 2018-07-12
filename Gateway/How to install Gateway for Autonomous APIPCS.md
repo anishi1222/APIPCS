@@ -119,8 +119,7 @@
     - Client ID、Client Secretは、接続したいAPIPCSのインスタンスのものを使います。
     - 通常、IDCSのコンソール＞APICSAUTO_(インスタンス名)＞Configuration＞General Informationにあります。
 
-![エビフライトライアングル](http://i.imgur.com/Jjwsc.jpg "サンプル")
-    <img src="https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image01.png" style="width:1.23611in;height:0.83333in" />
+![エビフライトライアングル](https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image01.png)
 
 ## 論理GatewayへのGateway Nodeの追加
 

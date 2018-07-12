@@ -101,8 +101,8 @@
     # 起動だけしたい場合は、startを付ける
     APIGateway -f gateway-props.json -a start
     ```
-    このとき、以下の内容を尋ねてくる。
-    ｰ Gateway Nodeの管理ユーザー、パスワード(GatewayをホストするWebLogic Serverの管理者パスワード)
+> このとき、以下の内容を尋ねてきます。
+> ｰ Gateway Nodeの管理ユーザーとパスワード(GatewayをホストするWebLogic Serverの管理者パスワード)
 
 ## 論理Gatewayの作成
 
@@ -115,7 +115,8 @@
     - Gateway Managerのユーザー、パスワード
     - Gateway ManagerのClient Id、Client Secret
 
-    Client ID、Client Secretは、接続したいAPIPCSのインスタンスのものを使う。通常、IDCSのコンソール＞APICSAUTO_(インスタンス名)＞Configuration＞General Informationにある。
+> Client ID、Client Secretは、接続したいAPIPCSのインスタンスのものを使います。
+> 通常、IDCSのコンソール＞APICSAUTO_(インスタンス名)＞Configuration＞General Informationにあります。
 
 ## 論理GatewayへのGateway Nodeの追加
 
@@ -130,4 +131,5 @@
     - Gateway Runtime Userのユーザー、パスワード
     - Gateway Manager RuntimeのClient Id、Client Secret
 
-    Client ID、Client Secretは、接続したいAPIPCSのインスタンスのものを使う。通常、IDCSのコンソール＞APICSAUTO_(インスタンス名)＞Configuration＞General Informationにある。
+> Client ID、Client Secretは、接続したいAPIPCSのインスタンスのものを使います。
+> 通常、IDCSのコンソール＞APICSAUTO_(インスタンス名)＞Configuration＞General Informationにあります。

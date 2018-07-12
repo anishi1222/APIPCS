@@ -16,7 +16,7 @@
 ## ドキュメント
 
 以下にあります。
-> Installing a Gateway Node
+> Installing a Gateway Node <br/>
 > [https://docs.oracle.com/en/cloud/paas/api-platform-cloud/apfad/installing-gateway-node.html#GUID-6848A2B0-03D0-435B-B867-5D9FD80E595B](https://docs.oracle.com/en/cloud/paas/api-platform-cloud/apfad/installing-gateway-node.html#GUID-6848A2B0-03D0-435B-B867-5D9FD80E595B)
 
 ## 事前構成

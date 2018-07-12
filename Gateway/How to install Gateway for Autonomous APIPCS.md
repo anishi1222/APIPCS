@@ -112,7 +112,7 @@
     ```
     このとき、以下の内容を尋ねてきます。
     - Gateway Nodeの管理ユーザー、パスワード(GatewayをホストするWebLogic Serverの管理者パスワード)
-    - Gateway Managerのユーザー、パスワード
+    - Gateway Managerのユーザー、パスワード (Gateway NodeおよびLogical Gatewayを管理するユーザー)
     - Gateway ManagerのClient Id、Client Secret
 
     Gateway ManagerのClient Id、Client Secretは、IDCSで確認する必要があります。
@@ -129,13 +129,17 @@
     ```bash
     APIGateway -f gateway-props.json -a join
     ```
-    このとき、以下の内容を尋ねてくる。
+    このとき、以下の内容を尋ねてきます。
     - Gateway Nodeの管理ユーザー、パスワード
-    - Gateway Managerのユーザー、パスワード
+    - Gateway Managerのユーザー、パスワード (Gateway NodeおよびLogical Gatewayを管理するユーザー)
     - Gateway ManagerのClient Id、Client Secret
-    - Gateway Runtime Userのユーザー、パスワード
+    - Gateway Runtime Userのユーザー、パスワード (GatewayとManagement Service間の通信時に使うユーザー)
     - Gateway Manager RuntimeのClient Id、Client Secret
 
-    Gateway ManagerのClient Id、Client Secretは、IDCSで確認する必要があります。
+    Gateway Manager、Gateway Runtime UserのClient Id、Client Secretは、IDCSで確認する必要があります。
     - Client ID、Client Secretは、接続したいAPIPCSのインスタンスのものを使います。
     - 通常、IDCSのコンソール＞APICSAUTO_(インスタンス名)＞Configuration＞General Informationにあります。
+
+## 論理Gatewayの作成、Nodeの追加時のユーザー、パスワードなど
+
+認証方式はOAuth 2.0です。

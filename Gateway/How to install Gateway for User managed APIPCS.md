@@ -13,14 +13,20 @@
 | Gateway Installerの展開先 | /u01/gwinst |
 | GatewayのInstall先 | /u01/apipcs/gw/install |
 
+## ドキュメント
+
+以下にあります。
+> Installing a Gateway Node <br/>
+> [https://docs.oracle.com/en/cloud/paas/api-platform-cloud-um/apfad/installing-gateway-node.html#GUID-6848A2B0-03D0-435B-B867-5D9FD80E595B](https://docs.oracle.com/en/cloud/paas/api-platform-cloud-um/apfad/installing-gateway-node.html#GUID-6848A2B0-03D0-435B-B867-5D9FD80E595B)
+
 ## 事前構成
 
-1. User追加（oracle）
-1. 作業ディレクトリの作成(/u01)
-1. ホスト名の解決のための設定
+1. Userの追加（oracle）
+2. 作業ディレクトリの作成(/u01)
+3. ホスト名の解決のための設定
     - /etc/hostsへの追加・編集
     - /etc/sysconfig/networkや/etc/hostnameの編集
-1. Swapfileの作成 (OPCの場合。Bare Metalであれば作成済み)
+4. 必要であれば、Swapfileを作成 (OPCの場合。Bare Metalであれば作成済み)
     ```bash
     # 4GBのSwapを作る
     dd if=/dev/zero of=/swapfile bs=1024K count=4096
@@ -34,19 +40,19 @@
 1. /tmpにopcユーザーで以下を転送
     - Gateway Installer
     - JDK (Server JREで可。tar.gzのほうが使いやすい）
-1. oracleユーザーで転送済みファイルを展開
+2. oracleユーザーで転送済みファイルを展開
     - Gateway Installer：/u01/gwinst/
     - JDK : /u01/java
-1. ~oracle/.bash_profileを編集（環境変数の設定）
+3. ~oracle/.bash_profileを編集（環境変数の設定）
     ```bash
     export JAVA_HOME=/u01/java
     export PATH=$JAVA_HOME/bin:$PATH
     ```
-1. 環境変数の反映
+4. 環境変数の反映
     ```bash
     . ~oracle/.bash_profile
     ```
-1. JDKの乱数生成設定を変更（rpmでJDKをインストールしている場合、rootで作業実施する必要がある）
+5. JDKの乱数生成設定を変更（rpmでJDKをインストールしている場合、rootで作業実施する必要がある）
     - $JAVA_HOME/jre/lib/security/java.securityを開く
     - securerandom.source=file:/dev/random の記述を securerandom.source=file:/dev/urandom に変更する（randomをurandomに変更）
     ```bash
@@ -79,7 +85,7 @@
         "logicalGatewayId": "101"
     }
     ```
-1. Gatewayのインストール、ドメイン作成、起動
+2. Gatewayのインストール、ドメイン作成、起動
     ```bash
     # Actionパラメータを指定しない場合、デフォルトアクションはinstall-configure
     APIGateway -f gateway-props.json
@@ -97,6 +103,9 @@
     ```bash
     APIGateway -f gateway-props.json -a creategateway
     ```
+    このとき、以下の内容を尋ねてきます。
+    - Gateway Nodeの管理ユーザー、パスワード(GatewayをホストするWebLogic Serverの管理者パスワード)
+    - Gateway Managerのユーザー、パスワード (Gateway NodeおよびLogical Gatewayを管理するユーザー)
 
 ## 論理GatewayへのGateway Nodeの追加
 
@@ -104,6 +113,10 @@
     ```bash
     APIGateway -f gateway-props.json -a join
     ```
+    このとき、以下の内容を尋ねてきます。
+    - Gateway Nodeの管理ユーザー、パスワード
+    - Gateway Managerのユーザー、パスワード (Gateway NodeおよびLogical Gatewayを管理するユーザー)
+    - Gateway Runtime Userのユーザー、パスワード (GatewayとManagement Service間の通信時に使うユーザー)
 
 ## 論理Gatewayの作成、Nodeの追加時のユーザー、パスワードなど
 

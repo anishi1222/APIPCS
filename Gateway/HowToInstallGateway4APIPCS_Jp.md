@@ -1,4 +1,4 @@
-# Gateway installation procedure for Autonomous APIPCS
+# Gateway installation procedure for Autonomous APIPCS (Japanese)
 
 ## 注意事項
 
@@ -8,6 +8,7 @@
 
 | 項目 | 条件 |
 |:--|:--|
+| Gateway Node | VM.Standard2.1 (OCI) |
 | インストール、実行ユーザー | oracle |
 | JDK (JAVA_HOME)の展開先 | /u01/java |
 | Gateway Installerの展開先 | /u01/gwinst |
@@ -33,6 +34,12 @@
     mkswap /swapfile
     swapon /swapfile
     # /etc/fstabに追加しておく
+    ```
+5. firewalldが有効化されている環境の場合、Gatewayへのアクセスを許可するよう、事前に構成しておく。以下はその例。
+    ```bash
+    sudo firewall-cmd --add-port=9022/tcp --permanent
+    sudo firewall-cmd --add-port=8011/tcp --permanent
+    sudo firewall-cmd --reload
     ```
 
 ## 依存モジュールのビルドおよび展開
@@ -139,7 +146,3 @@
     Gateway Manager、Gateway Runtime UserのClient Id、Client Secretは、IDCSで確認する必要があります。
     - Client ID、Client Secretは、接続したいAPIPCSのインスタンスのものを使います。
     - 通常、IDCSのコンソール＞APICSAUTO_(インスタンス名)＞Configuration＞General Informationにあります。
-
-## 論理Gatewayの作成、Nodeの追加時のユーザー、パスワードなど
-
-認証方式はOAuth 2.0です。

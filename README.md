@@ -7,6 +7,7 @@ About Oracle API Platform Cloud Service (Autonomous/User managed)
 ### English
 
 - [Autonomous](./Gateway/HowToInstallGateway4APIPCS_En.md)
+- [User managed](./Gateway/HowToInstallGateway4APIPCS-UM_En.md)
 
 ### Japanese
 

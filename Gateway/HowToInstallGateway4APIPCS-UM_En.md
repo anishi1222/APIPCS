@@ -1,4 +1,4 @@
-# Gateway installation procedure for Autonomous APIPCS (English)
+# Gateway installation procedure for User managed APIPCS (English)
 
 ## Notes
 
@@ -18,7 +18,7 @@
 
 Official document is available in the following URL.
 > Installing a Gateway Node <br/>
-> [https://docs.oracle.com/en/cloud/paas/api-platform-cloud/apfad/installing-gateway-node.html#GUID-6848A2B0-03D0-435B-B867-5D9FD80E595B](https://docs.oracle.com/en/cloud/paas/api-platform-cloud/apfad/installing-gateway-node.html#GUID-6848A2B0-03D0-435B-B867-5D9FD80E595B)
+> [https://docs.oracle.com/en/cloud/paas/api-platform-cloud-um/apfad/installing-gateway-node.html#GUID-6848A2B0-03D0-435B-B867-5D9FD80E595B](https://docs.oracle.com/en/cloud/paas/api-platform-cloud-um/apfad/installing-gateway-node.html#GUID-6848A2B0-03D0-435B-B867-5D9FD80E595B)
 
 ## Pre-configuration
 
@@ -40,7 +40,6 @@ Official document is available in the following URL.
     sudo firewall-cmd --add-port=8011/tcp --permanent
     sudo firewall-cmd --reload
     ```
-
 ## Transfer, configure, extract, and build dependencies
 
 1. Transfer the following dependencies to /tmp as 'opc'.
@@ -70,30 +69,25 @@ Official document is available in the following URL.
 1. Configure gateway-props.json. Configuration wizard in management service is helpful.
     ```json
     {
-        "logicalGatewayId" : "100",
-        "logicalGateway": "LGW01",
-        "managementServiceUrl" : "https://xxxxx.apiplatform.ocp.oraclecloud.com:443",
-        "idcsUrl" : "https://idcs-xxxxx.identity.oraclecloud.com/oauth2/v1/token",
-        "requestScope" : "https://xxxxx.apiplatform.ocp.oraclecloud.com:443.apiplatform",
-        "gatewayNodeName" : "LGW01 Node 1",
-        "gatewayNodeDescription" : "LGW01 Node 1",
+        "nodeInstallDir": "/u01/apipcs/gw/install",
+        "installationArchiveLocation": "/u01/apipcs/gw/archives",
+        "logicalGateway": "LGW02",
+        "gatewayNodeName": "GWNode02",
+        "managementServiceUrl": "https://xxx.xxx.xxx.xxx:443",
+        "oauthProfileLocation": "/u01/apipcs/gw/security/OAuth2TokenLocalEnforcerConfig.xml",
         "listenIpAddress": "yyy.yyy.yyy.yyy",
-        "publishAddress": "xxx.xxx.xxx.xxx",
-        "nodeInstallDir" : "/u01/apipcs",
+        "publishAddress": "zzz.zzz.zzz.zzz",
         "managementServiceConnectionProxy": [],
         "nodeProxy": [],
-        "installationArchiveLocation" : "/u01/apipcs/archives",
-        "oauthProfileLocation": "/u01/apipcs/gw/security/OAuth2TokenLocalEnforcerConfig.xml",
-        "gatewayExecutionMode" : "Development",
-        "heapSizeGb" : "2",
-        "maximumHeapSizeGb" : "4",
-        "gatewayMServerPort" : "8011",
-        "gatewayMServerSSLPort" : "9022",
-        "nodeManagerPort" : "5556",
-        "coherencePort" : "8088",
-        "gatewayDBPort" : "1527",
-        "gatewayAdminServerPort" : "8001",
-        "gatewayAdminServerSSLPort" : "9021"
+        "gatewayExecutionMode": "Development",
+        "gatewayAdminServerPort": "7501",
+        "gatewayAdminServerSSLPort": "7502",
+        "gatewayMServerPort": "8001",
+        "gatewayMServerSSLPort": "8002",
+        "heapSizeGb": "2",
+        "maximumHeapSizeGb" : "2",
+        "opatchesFolder": "/u01/patches",
+        "logicalGatewayId": "101"
     }
     ```
 2. Install, create WebLogic Domain, and start gateway
@@ -121,16 +115,6 @@ You can create logical gateway on management service, of course.
     The following questions are asked when doing actions listed above.
     - Gateway Node administration username and password (Administrator user and password for WebLogic Server which hosts gateway.)
     - Username and password of Gateway Manager (Users who manage specified logical gateway.)
-    - Client id and Client secret of APIPCS instance.
-
-    Client Id and Client Secret for APIPCS instance are listed in IDCS.
-    - Client ID and Client Secret is created when APIPCS instance was created.
-    - You can access these information from IDCS console.
-    > IDCS console > APICSAUTO_(instance name) > Configuration > General Information
-
-![IDCS01](https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image01.png)
-
-![IDCS02](https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image02.png)
 
 ## Add gateway node to logical gateway
 
@@ -141,11 +125,4 @@ You can create logical gateway on management service, of course.
     The following questions are asked when doing actions listed above.
     - Gateway Node administration username and password (Administrator user and password for WebLogic Server which hosts gateway.)
     - Username and password of Gateway Manager (User who manages specified logical gateway.)
-    - Client id and Client secret of APIPCS instance for Gateway Manager.
     - Username and password of Gateway Runtime User (This user is used when the gateway node communicates with management service.)
-    - Client id and Client secret of APIPCS instance for Gateway Runtime User.
-
-    Client Id and Client Secret for APIPCS instance are listed in IDCS.
-    - Client ID and Client Secret is created when APIPCS instance was created.
-    - You can access these information from IDCS console.
-    > IDCS console > APICSAUTO_(instance name) > Configuration > General Information

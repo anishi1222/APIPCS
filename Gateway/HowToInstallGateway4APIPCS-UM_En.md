@@ -40,7 +40,8 @@ Official document is available in the following URL.
     sudo firewall-cmd --add-port=8011/tcp --permanent
     sudo firewall-cmd --reload
     ```
-## Transfer, configure, extract, and build dependencies
+
+## Transfer, extract, and configure dependencies
 
 1. Transfer the following dependencies to /tmp as 'opc'.
     - Gateway Installer

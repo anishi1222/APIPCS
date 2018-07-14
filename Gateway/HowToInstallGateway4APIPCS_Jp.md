@@ -42,7 +42,7 @@
     sudo firewall-cmd --reload
     ```
 
-## 依存モジュールのビルドおよび展開
+## 依存モジュールの展開および構成
 
 1. /tmpにopcユーザーで以下を転送
     - Gateway Installer

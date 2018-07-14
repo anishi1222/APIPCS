@@ -130,8 +130,6 @@ You can create logical gateway on management service, of course.
 
 ![IDCS01](https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image01.png)
 
-![IDCS02](https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image02.png)
-
 ## Add gateway node to logical gateway
 
 1. Add the gateway node to logical gateway specified in gateway-props.json

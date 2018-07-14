@@ -128,8 +128,6 @@
 
 ![IDCS01](https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image01.png)
 
-![IDCS02](https://raw.githubusercontent.com/anishi1222/APIPCS/images/Gateway/IDCS-image02.png)
-
 ## 論理GatewayへのGateway Nodeの追加
 
 1. Gateway Nodeの追加

@@ -54,7 +54,7 @@ Official document is available in the following URL.
     export JAVA_HOME=/u01/java
     export PATH=$JAVA_HOME/bin:$PATH
     ```
-4. Reflect configured environment variables to current session.
+4. Reflect configured environment variables to the current session.
     ```bash
     . ~oracle/.bash_profile
     ```

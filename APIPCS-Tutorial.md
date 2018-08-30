@@ -244,14 +244,14 @@ API Platform Cloud Serviceの利用者は以下の1個以上のペルソナに�
 
 APIリクエストは、ユーザーやアプリケーションがリクエストをAPIに送信するためのエンドポイントです。リクエストを送信する完全な宛先は、使用プロトコル、ゲートウェイのホスト名、APIのリクエスト・エンドポイント、サービスで利用可能な任意のプライベート・リソース・パスから構成されています。以下の例を考えます。
 
-[http://APIcs.oracle.com:8001/Energy/1/estimate/4859634](http://APIcs.oracle.com:8001/Energy/1/estimate/4859634)
+[http://apics.oracle.com:8001/Energy/1/estimate/4859634](http://apics.oracle.com:8001/Energy/1/estimate/4859634)
 
 それぞれの意味づけは以下の通りです。
 
 | 項目                              | 意味                                                           |
 | ----------------------------- | ---------------------------------------------------------- |
 | http                          | ゲートウェイがリクエストを受け取るプロトコル                                     |
-| http://APIcs.oracle.com:8001/ | このAPIがデプロイされている、ゲートウェイ・インスタンスのホスト名とポート番号                   |
+| http://apics.oracle.com:8001/ | このAPIがデプロイされている、ゲートウェイ・インスタンスのホスト名とポート番号                   |
 | Energy/1/                     | 選択したAPIエンドポイント（この例では、**/{API名}/{APIバージョン}**でハードコーディングされている |
 | /estimate/4859634             | APIのプライベート・リソース・パス。APIエンドポイントの先のバックエンド・サービスへ渡される。          |
 
@@ -692,7 +692,7 @@ APIの実装、ゲートウェイへのデプロイ、ポリシーの実装、AP
 
     | メソッド     | リクエストURL |
     | -------- | -------- |
-    | GET | [http://APIcs.oracle.com:8001/Energy/1/usage/current/month/4859634](http://APIcs.oracle.com:8001/Energy/1/usage/current/month/4859634) |
+    | GET | [http://apics.oracle.com:8001/Energy/1/usage/current/month/4859634](http://apics.oracle.com:8001/Energy/1/usage/current/month/4859634) |
 
     この呼び出しでは、Bad Requestメッセージを伴ってリクエストが拒否される。その理由は、ヘッダー検証ポリシーが有効化されているためである。
     1以上の値を持つ、tenant-idをHTTPヘッダーに付けておく必要がある。
@@ -705,7 +705,7 @@ APIの実装、ゲートウェイへのデプロイ、ポリシーの実装、AP
 
     | メソッド     | リクエストURL |
     | -------- | -------- |
-    | GET | [http://APIcs.oracle.com:8001/Energy/1/usage/last/month/4859634](http://APIcs.oracle.com:8001/Energy/1/usage/last/month/4859634) |
+    | GET | [http://apics.oracle.com:8001/Energy/1/usage/last/month/4859634](http://apics.oracle.com:8001/Energy/1/usage/last/month/4859634) |
 
     このリクエストはMethod not allowedメッセージを伴って拒否される。その理由は、インターフェース・フィルタリングポリシーでこのリソースに対するリクエストを拒否しているためである。このポリシーは、例えバックエンド・サービスが /usage/last/month でリソースを有しているとしても、 /usage/current/month/* と /estimate/* 以外のリソースへのリクエストを拒否する。
 
@@ -713,7 +713,7 @@ APIの実装、ゲートウェイへのデプロイ、ポリシーの実装、AP
 
     | メソッド     | リクエストURL |
     | -------- | -------- |
-    | GET |  [http://APIcs.oracle.com:8001/Energy/1/estimate/4859634](http://APIcs.oracle.com:8001/Energy/1/estimate/4859634) |
+    | GET |  [http://apics.oracle.com:8001/Energy/1/estimate/4859634](http://apics.oracle.com:8001/Energy/1/estimate/4859634) |
 
     バックエンド・サービスには /estimate リソースがないが、Resource Based Routingポリシーが /estimate リソースへのリクエストをチェックし、ポリシーで構成したように、当該リソースを持つサービスへルーティングするため、以下のようなレスポンスを受け取る。
 
@@ -802,7 +802,7 @@ HTMLやMarkdownに加え、API Platform Cloud ServiceではAPIary Cloud Service�
 
 APIary Cloud Serviceとの統合にはAPIary Cloud ServiceのTeamアカウントが必要で、かつProfessionalアカウントである必要があります。登録は以下のURLから可能です。
 
-[https://APIary.io/](https://APIary.io/)
+[https://apiary.io/](https://apiary.io/)
 
 なお、このチュートリアルを実施する上で、APIary Cloud Serviceのサブスクリプション登録をする必要はありません。
 
@@ -933,7 +933,7 @@ Portalに公開されたAPIのリストは非常にたくさんある場合、�
 以下の手順に従って、開発者ポータルにログインします。
 
 1. 現在の環境からログアウトする。もしくは別のブラウザ、プライベートウィンドウを使う。
-2. 開発者ポータル [http://APIcs.oracle.com:7201/developers/](http://APIcs.oracle.com:7201/developers/) に以下の資格証明を使ってログインする。
+2. 開発者ポータル [http://apics.oracle.com:7201/developers/](http://apics.oracle.com:7201/developers/) に以下の資格証明を使ってログインする。
 
     | ユーザー名 | パスワード |
     | ----- | ---------------------------------------- |
@@ -1082,7 +1082,7 @@ Customer Mobile Appというアプリケーションが既にハンズオン環�
 
 | URL      | ユーザー名 | パスワード |
 | ----- | ------ | ---------------------------------- |
-| http://APIcs.oracle.com:7201/APIplatform | API-manager-user | welcome1 |
+| http://apics.oracle.com:7201/APIplatform | API-manager-user | welcome1 |
 
 2. APIタブで、**Energy**をクリック
 3. **Registrations**タブをクリック
@@ -1172,7 +1172,7 @@ Customer Mobile Appというアプリケーションが既にハンズオン環�
 |           |                                                                                                                                                                             |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | メソッド      | GET                                                                                                                                                                         |
-| リクエストURL  | ```http://APIcs.oracle.com:8001/Energy/1/usage/current/month/4859634``` |
+| リクエストURL  | ```http://apics.oracle.com:8001/Energy/1/usage/current/month/4859634``` |
 | tenant-id | 1以上の数値                                                                                                                                                                      |
 
 この呼び出しでは、リクエストが拒否されるが、その理由は、キー検証ポリシーが有効化されているためである。HTTPヘッダーにAPI-keyを設定する必要がある。
@@ -1229,7 +1229,7 @@ Postmanを使っていない場合にはこの章をスキップしてもかま�
     <tbody>
     <tr>
     <td>server</td>
-    <td>APIcs.oracle.com:8001</td>
+    <td>apics.oracle.com:8001</td>
     </tr>
     <tr>
     <td>API</td>

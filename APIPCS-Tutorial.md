@@ -157,7 +157,7 @@ API Platform Cloud Serviceの利用者は以下の1個以上のペルソナに�
 2. 以下の資格証明でログインします。
 
 <table><tbody>
-<tr><td>ユーザー名</td><td>ゲートウェイ管理者ロールに属するユーザー(API-ゲートウェイ-user)</td></tr>
+<tr><td>ユーザー名</td><td>ゲートウェイ管理者ロールに属するユーザー(api-gateway-user)</td></tr>
 <tr><td>パスワード</td><td>当該ユーザーのパスワード</td></tr>
 </tbody></table>
 
@@ -177,7 +177,7 @@ API Platform Cloud Serviceの利用者は以下の1個以上のペルソナに�
 6. **Deploy to ゲートウェイ**をクリック
 7. **Add Grantee**をクリック
 8. **API-manager-user**を選択して［Add］をクリック
-9. API-ゲートウェイ-userをクリックしてユーザーメニューを展開し、Sign Outをクリックして管理者ポータルからログアウトする
+9. **API-gateway-user**をクリックしてユーザーメニューを展開し、Sign Outをクリックして管理者ポータルからログアウトする
 
 ![image1](./media/image1.png)
 

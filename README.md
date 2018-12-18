@@ -15,3 +15,5 @@ About Oracle API Platform Cloud Service (Autonomous/User managed)
 - [User managed](./Gateway/HowToInstallGateway4APIPCS-UM_Jp.md)
 
 ## [Groovy Script Sample](https://anishi1222.github.io/api-groovy)
+
+## [Tutorial (Japanese)](https://anishi1222.github.io/APIPCS/Tutorial)

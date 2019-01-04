@@ -12,11 +12,15 @@ API Platform Cloud Service（APIPCS）のチュートリアルです。
 
 - シナリオ
   - チュートリアル
+<<<<<<< HEAD
     - スクリーンキャスト（近日公開）
+=======
+>>>>>>> 77d4a94f1c138e3032c2f64e78cebdf3f7ff6bca
 
 シナリオを開始する際に、リンク先のチュートリアルを開いてガイダンスを参照することもできますが、盲目的にチュートリアルの手順に従うのではなく、必要なガイダンスだけで操作するようにしてください。実際には、変更を加える際にAPIをデプロイするなど、自然に繰り返されるいくつかのタスクがあります。最初のデプロイ時にはチュートリアルを使う必要があるかもしれませんｇ、2回目以後は独力で試してください。
 
 ## Getting Started
+<<<<<<< HEAD
 
 1. 必要な環境を選択します。
     1. [環境](./environments) に従って選択する
@@ -71,3 +75,11 @@ If you have any questions about these tutorials or API Platform CS, follow the p
 ### Non-Oracle Employees
 
 1. In the Developer Cloud Service instance where you are accessing this content, navigate to Issues.  Create a new Issue, describing your issue/question.  Make sure you provide your e-mail address in the description and assign the issue to *Robert Wunderlich*
+=======
+
+1. 必要な環境を選択します。
+    1. [環境](./environments) に従って選択する
+    1. [シナリオ](./scenarios) に従って利用したいシナリオを選択する（こちらは現時点で1個のみなので選択は簡単ですね）
+  
+> 注：リンクは常に新しいタブで開いてください（右クリック→*新しいタブでリンクを開く*）。そうすれば、タスクを完了後にリンク先のチュートリアルなどからこの演習ガイドに戻ってくることができます。
+>>>>>>> 77d4a94f1c138e3032c2f64e78cebdf3f7ff6bca

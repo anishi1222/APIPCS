@@ -18,18 +18,18 @@ API Platformのチュートリアルへようこそ。ここでは、API Platfor
 
 ### API管理
 
-チュートリアル|スキルレベル|前提条件のチュートリアル
---- | --- | ---
-[APIポリシー実装の作成](./manage/apis/create_api)|学習者| [APIの設計](./design/design_api)
-[APIのデプロイ](./manage/apis/deploy_api)|学習者| [APIポリシー実装の作成](./manage/apis/create_api)
-[APIの呼び出し](./manage/apis/invoke_api)|学習者| [APIのデプロイ](./manage/apis/deploy_api)
-[プランへのAPIの資格付与](./manage/apis/entitle_api) |学習者| [APIポリシー実装の作成](./manage/apis/create_api)、[APIプランの作成](./manage/plans/create_plan)
-[プランの作成](./manage/plans/create_plan)|学習者| なし
-[サービスの作成](./manage/services/create_service)|学習者| なし
-[メソッド・マッピングポリシー](./manage/apis/policies/method_mapping)|学習者| [APIポリシー実装の作成](./manage/apis/create_api)、[サービスの作成](./manage/services/create_service)
+チュートリアル|前提条件のチュートリアル
+--- | ---
+[APIポリシー実装の作成](./manage/apis/create_api)| [APIの設計](./design/design_api)
+[APIのデプロイ](./manage/apis/deploy_api)| [APIポリシー実装の作成](./manage/apis/create_api)
+[APIの呼び出し](./manage/apis/invoke_api)| [APIのデプロイ](./manage/apis/deploy_api)
+[プランへのAPIの資格付与](./manage/apis/entitle_api) | [APIポリシー実装の作成](./manage/apis/create_api)、[APIプランの作成](./manage/plans/create_plan)
+[プランの作成](./manage/plans/create_plan)| なし
+[サービスの作成](./manage/services/create_service)| なし
+[メソッド・マッピングポリシー](./manage/apis/policies/method_mapping)| [APIポリシー実装の作成](./manage/apis/create_api)、[サービスの作成](./manage/services/create_service)
 
 ### ゲートウェイ管理
 
-チュートリアル|スキルレベル|前提条件のチュートリアル
---- | --- | ---
-[ゲートウェイ上のアクセスGrantの管理](./manage/gateways/grants)|学習者| なし
+チュートリアル|前提条件のチュートリアル
+--- | ---
+[ゲートウェイ上のアクセスGrantの管理](./manage/gateways/grants)| なし
